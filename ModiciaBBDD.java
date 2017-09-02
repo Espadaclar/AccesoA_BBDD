@@ -25,9 +25,9 @@ public class ModiciaBBDD {
             //2º CREAR UN OBJETO  STATEMENT   PARA PODER REALIZAR UNA CONSULTA MYSQL
             Statement miStatement = (Statement) miConexion.createStatement();
 
-            // PARA MODIFICAR REGISTROS EN UNA TABLA. --> creamos una variable que sea == a la sentencia de msqul que MODIFICA datos.
+            // PARA BORRAR REGISTROS EN UNA TABLA. --> creamos una variable que sea == a la sentencia de msqul que ELIMINA datos.
            //---------------- String instruccionSql = "INSERT INTO empresa.empleado (idempleado, nombre, salario) VALUES(7000 ,'Ana', 3000)";
-           String instruccionSql = "UPDATE empresa.empleado SET salario = salario*2 WHERE idempleado = 7000"; 
+           String instruccionSql = "DELETE FROM empresa.empleado WHERE nombre = 'Ana'";
            // DECIMOS AL PROGRAMA QUE EJECUTE LA INSTRUCCIÓN MSQL.
             //en la interface Statement vemos varios mt que permiten ejecutar la instrucción tenemos uno para (INSERT, UPDATE Y DELETE)
             miStatement.executeUpdate(instruccionSql);
