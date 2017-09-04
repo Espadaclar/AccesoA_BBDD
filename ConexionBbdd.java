@@ -56,6 +56,7 @@ public class ConexionBbdd
                                             " " +miResultSet.getString("comision"));
                 //System.out.println(miResultSet.getString("Localidad"));
             }
+            miResultSet.close();
         }catch(Exception e){
             System.out.println("no conecta");
             System.out.println("");
